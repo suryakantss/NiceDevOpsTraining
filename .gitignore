@@ -1,0 +1,28 @@
+**/node_modules
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Package Files #
+
+# virtual machine crash logs
+hs_err_pid*
+replay_pid*
+
+# Build directories
+**/target/
+**/build/
+
+# IDE settings (IntelliJ, Eclipse, VS Code)
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+
+
+**/__pycache__/

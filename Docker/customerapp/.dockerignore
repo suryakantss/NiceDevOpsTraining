@@ -1,0 +1,51 @@
+# 1. Dependencies (Crucial)
+# Prevents overwriting container binaries with your local OS-specific modules
+node_modules
+npm-debug.log
+yarn-error.log
+.pnpm-store
+
+# 2. Build Outputs
+# Only include if you are building the application outside of Docker
+dist
+build
+.next
+.nuxt
+out
+
+# 3. Environment Variables & Secrets
+# Prevents leaking private keys, API credentials, and tokens into the public image
+.env
+.env.local
+.env.development
+.env.production
+.env*.local
+.npmrc
+
+# 4. Git Metadata
+# Trims image size by leaving behind commit histories and configurations
+.git
+.gitignore
+
+# 5. IDE & System Trash
+# Excludes local developer ecosystem files
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# 6. Testing & Documentation
+# Removes testing tools and static notes not required to run the app
+coverage
+.nyc_output
+**/*.test.js
+**/*.spec.js
+__tests__
+README.md
+docs
