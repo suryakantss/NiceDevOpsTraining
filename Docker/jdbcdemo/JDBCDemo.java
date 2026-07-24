@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class JDBCDemo {
 
     // Database credentials and connection URL
-    private static final String URL = "jdbc:mysql://localhost:3306/crmdb";
+    private static final String URL = "jdbc:mysql://localhost/crmdb";
     private static final String USER = "root";
     private static final String PASSWORD = "root";
 
@@ -22,11 +22,11 @@ public class JDBCDemo {
                 
                 System.out.println("\n--- User List ---");
                 while (rs.next()) {
-                    int id = rs.getInt("id");
+                    String id = rs.getString("id");
                     String name = rs.getString("name");
                     String email = rs.getString("email");
                     
-                    System.out.printf("ID: %d | Name: %s | Email: %s%n", id, name, email);
+                    System.out.printf("ID: %s | Name: %s | Email: %s%n", id, name, email);
                 }
             }
 
